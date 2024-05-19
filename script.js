@@ -47,8 +47,8 @@ const getRollbackMessage = function (price) {
 };
 
 allServicePrices = getAllServicePrices();
-fullPrice = getAllServicePrices();
-servicePercentPrice = getAllServicePrices();
+fullPrice = getFullPrice();
+servicePercentPrice = getServicePercentPrice();
 title = getTitle();
 
 showTypeOf(title);
