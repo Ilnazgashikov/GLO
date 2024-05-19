@@ -25,21 +25,25 @@ const asking = function () {
 
     adaptive = confirm("Нужен ли адаптив на сайте?");
 };
-
 const getAllServicePrices = function () {
-    let sum = 0
+    let sum = 0;
     for (let i = 0; i < 2; i++) {
-
-        if (i === 0) {
-            service1 = prompt("Какой дополнительный тип услуг нужен?");
-        } else if (i === 1) {
-            service2 = prompt("Какой дополнительный тип услуг нужен?");
-        };
-        sum += +prompt("Сколько это будет стоить?");
-    };
-    return sum
-};
-
+      if (i === 0) {
+        service1 = prompt("Какой дополнительный тип услуги нужен?");
+      } else if (i === 1) {
+        service2 = prompt("Какой дополнительный тип услуги нужен?");
+      }
+      const numberChecks = () => {
+        let n = 0;
+        do {
+          n = +prompt("Сколько это будет стоить?");
+        } while (!isNumber(n));
+        return +n;
+      };
+      sum += numberChecks();
+    }
+    return sum;
+  };
 const showTypeOf = function (variable) {
     console.log(variable, typeof variable);
 };
