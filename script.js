@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-const title = 1;
-const screen = 1;
-const screenPrice = 3;
-const rollBack = 4;
-const fullPrice = 5;
-const adaptive = 6;
-alert("Hello world!");
-console.log("Hello");
-=======
 let title = 'firstPeoject';
 let screens = "Простые, Cложные, Интерактивные";
 let screenPrice = 88;
@@ -27,4 +17,3 @@ console.log(fullPrice+'$');
 console.log(screens.toLocaleLowerCase().split(","));
 
 console.log(fullPrice*(rollback/100));
->>>>>>> lesson2
