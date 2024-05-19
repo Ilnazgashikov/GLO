@@ -18,6 +18,9 @@ function guessNumber() {
              countAttempts = 10;
              gameBody();
          }
+         else {
+          return null;
+         }
         }
         else if (randNum > myNumber) {
            countAttempts--;
