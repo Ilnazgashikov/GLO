@@ -1,26 +1,21 @@
-// "use strict";
-const books = document.querySelectorAll(".book");
-const body=document.body;
-const adv=document.querySelector('.adv');
-books[0].before(books[1]);
-books[0].after(books[4]);
-books[4].after(books[3]);
-books[3].after(books[5]);
-body.style.backgroundImage = "url('./image/you-dont-know-js.jpg')";
-adv.remove();
-books[0].children[1].children[9].before(books[0].children[1].children[7]);
-books[0].children[1].children[10].before(books[0].children[1].children[2]);
-books[0].children[1].children[7].before(books[0].children[1].children[4]);
-books[0].children[1].children[6].before(books[0].children[1].children[3]);
+const square = document.getElementById('square');
+const circle = document.getElementById('circle');
+const inputText = document.querySelector('input[type=text]');
+const button = document.querySelector('button');
+const inputRange = document.querySelector('input[type=range]');
+const hideButton = document.getElementById('e_btn');
+const textValue = document.getElementById('range-span');
 
-books[5].children[1].children[10].before(books[5].children[1].children[8]);
-books[5].children[1].children[9].before(books[5].children[1].children[5]);
-books[5].children[1].children[1].after(books[5].children[1].children[7]);
-books[5].children[1].children[6].after(books[5].children[1].children[3]);
-books[5].children[1].children[6].after(books[5].children[1].children[5]);
+hideButton.style.display = 'none';
 
-books[4].children[0].firstElementChild.textContent = 'Книга 3. this и Прототипы Объектов';
-const newElement = document.createElement('li');
-newElement.textContent = 'Глава 8: За пределами ES6';
-books[2].children[1].append(newElement);
-books[2].children[1].children[9].before(books[2].children[1].lastElementChild)
+button.addEventListener('click', event => {
+    if (inputText.value) {
+        square.style.backgroundColor = inputText.value; 
+    }
+});
+
+inputRange.addEventListener('input', event => {
+    circle.style.width = inputRange.value + "%";
+    circle.style.height = inputRange.value + "%";
+    textValue.textContent = inputRange.value;
+});
