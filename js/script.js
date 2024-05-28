@@ -48,10 +48,7 @@ const appData = {
       appData.addScreens()
       appData.addServices()
       appData.addPrices(),
-        //   appData.getServicePercentPrices(),
-        //   appData.logger()
-        // console.log(appData);
-        appData.showResult()
+      appData.showResult()
     }
   },
   showResult: () => {
